@@ -1,0 +1,25 @@
+{
+  "name": "fresco-development-tool-cli",
+  "version": "1.0.0",
+  "description": "Node command line tool to be used for general development and workflow enhancement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrescoDev/fresco-development-tool-cli.git"
+  },
+  "author": "frescoDev",
+  "license": "ISC",
+  "bin": {
+    "snippet": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/FrescoDev/fresco-development-tool-cli/issues"
+  },
+  "homepage": "https://github.com/FrescoDev/fresco-development-tool-cli#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
