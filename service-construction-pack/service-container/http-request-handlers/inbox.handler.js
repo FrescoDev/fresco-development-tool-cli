@@ -1,3 +1,4 @@
+import BaseHandler from 'fresco-http-service-utilities'
 import Worker from '../../SERVICE_NAME'
 
 class InboxHandler extends BaseHandler {

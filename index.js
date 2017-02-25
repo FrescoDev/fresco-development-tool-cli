@@ -4,6 +4,8 @@ var program = require('commander')
 var ncp = require('ncp').ncp
 var mv = require('mv')
 var replace = require('replace')
+var exec = require('child_process').exec,
+  child
 
 ncp.limit = 16
 
@@ -28,7 +30,26 @@ program
           silent: true
         })
 
-        console.log('done!')
+        process.chdir('./' + program.name)
+
+        child = exec('npm install',
+          function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout)
+            console.log('stderr: ' + stderr)
+            if (error !== null) {
+              console.log('exec error: ' + error)
+            }
+
+            child = exec('npm run test',
+              function (error, stdout, stderr) {
+                console.log('stdout: ' + stdout)
+                console.log('stderr: ' + stderr)
+                if (error !== null) {
+                  console.log('exec error: ' + error)
+                }
+                console.log('done!')
+              })
+          })
       })
     }else {
       console.log("sorry couldn't recognise command")
