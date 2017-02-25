@@ -1,6 +1,6 @@
 {
   "name": "fresco-development-tool-cli",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Node command line tool to be used for general development and workflow enhancement.",
   "main": "index.js",
   "scripts": {
