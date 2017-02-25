@@ -1,11 +1,10 @@
-require('babel-polyfill');
-import MetaHandler from '../http-request-handlers/meta.handler';
-import {Router} from 'express';
-import correspondent from '../../facebook-correspondance-service';
+import InboxHandler from '../http-request-handlers/inbox.handler.js'
+import MetaHandler from '../http-request-handlers/meta.handler'
+import { Router } from 'express'
 
-const routes = new Router();
+const routes = new Router()
 
-routes.use('/inbox', correspondent.router());
-routes.get('/meta', MetaHandler.index);
+routes.post('/inbox', InboxHandler.index)
+routes.get('/meta', MetaHandler.index)
 
-export default routes;
+export default routes
